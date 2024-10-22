@@ -261,5 +261,3 @@ Importanza dei Big Data nell’analisi delle tendenze di mercato e nelle strateg
 ## Produzione di Video e Contenuti Visivi
 - *Importanza dell'Audio:* L'audio è un senso cruciale nella comunicazione visiva, in quanto può creare una connessione emotiva profonda con il pubblico.
 - *Fasi Brevi:* Utilizzare frasi brevi per facilitare la comprensione, rendendo i contenuti più accessibili.
-
-ciao pasquale

@@ -469,7 +469,7 @@ Funzioni principali del livello di applicazione:
 2. **Trasparenza della complessità della comunicazione**:
    Sebbene sembri che la comunicazione avvenga da **applicazione a applicazione**, sotto il livello di applicazione c'è una struttura complessa composta dai vari livelli del modello OSI, che si occupano della trasmissione effettiva dei dati. Quando, ad esempio, un professore invia un'email a tutti gli studenti, questa attraversa vari **nodi intermedi** (come il router di casa), passando attraverso i livelli fisico, data link, e rete. Questi livelli gestiscono e instradano i dati affinché raggiungano la destinazione correttamente.
 
-<img src="assets/smart_IoT/lez.3/smart-intermediate-nodes.png" alt="Intermediate nodes in OSI architectures" width="100%">
+<img src="lesson-img/lez.3/smart-intermediate-nodes.png" alt="Intermediate nodes in OSI architectures" width="100%">
 
 >### Esempio pratico
 >Quando un utente invia un'email, l'informazione viene convertita in segnali elettrici binari che viaggiano attraverso la rete. I nodi intermedi (come i router) e i vari livelli del modello OSI lavorano insieme per far sì che l'email raggiunga la sua destinazione. Solo il destinatario finale, che ha aperto la sessione con il mittente, è in grado di **ricevere** e **ricostruire** correttamente il messaggio.
@@ -540,7 +540,7 @@ Nell'immagine soprastante vediamo come al livello "Trasporto", i protocolli e i 
 
 >### Esempio di comunicazione
 
-<img src="assets/smart_IoT/lez.3/es_com_client_server.png" alt="Esempio di comunicazione per tra client e server" width="100%">
+<img src="lesson-img/lez.3/es_com_client_server.png" alt="Esempio di comunicazione per tra client e server" width="100%">
 
 # DNS (Domain Name System)
 
@@ -558,7 +558,7 @@ Quando un utente digita un nome di dominio nel browser, il computer invia una ri
 
 Nell'analizzare l'architettura di rete, è fondamentale distinguere tra le reti tradizionali e quelle dedicate ai servizi IoT (Internet of Things). Ecco le principali differenze:
 
-<img src="assets/smart_IoT/lez.3/strutture_di_rete.png" alt="Strutture di reti" width="100%">
+<img src="lesson-img/lez.3/strutture_di_rete.png" alt="Strutture di reti" width="100%">
 
 ## Reti Tradizionali
 
@@ -797,7 +797,7 @@ Quando si lavora a questo livello, è necessario considerare diversi aspetti:
 
 #### Scelta dei protocolli di accesso alla rete
 
-<img src="assets/smart_IoT/lez.4/scelta-protocolli-rete.png" alt="scelta protocolli di rete" width="100%">
+<img src="lesson-img/lez.4/scelta-protocolli-rete.png" alt="scelta protocolli di rete" width="100%">
 
 #### Relazione tra frequenza, range e quantità di dati trasmessi
 
@@ -831,7 +831,7 @@ La **topologia di rete** rappresenta il modo in cui i dispositivi sono connessi 
   - **Topologia ad albero (Tree Topology)**: I dispositivi sono connessi tra loro attraverso nodi intermedi in una struttura ramificata. Se un nodo intermedio cade, le connessioni ad esso collegate falliscono. 
   - **Topologia a maglia (Mesh Topology)**: Ogni nodo è connesso a più altri nodi, creando percorsi alternativi. Può essere **parziale** (non tutti i nodi sono collegati tra loro) o **completa** (tutti i nodi sono collegati tra loro). Se un nodo cade, le comunicazioni possono comunque avvenire tramite percorsi alternativi.
 
-<img src="assets/smart_IoT/lez.4/topologia-albero-mash.png" alt="topologia 
+<img src="lesson-img/lez.4/topologia-albero-mash.png" alt="topologia 
 rete" width="100%">
 In una rete, è possibile combinare diversi tipi di connessione (come Ethernet, Bluetooth, Wi-Fi) per creare una topologia mista, ottimizzando la rete in base alle esigenze specifiche.
 
@@ -1083,10 +1083,10 @@ Gli attuatori possono essere classificati secondo diverse caratteristiche, come 
 4. **Tipo di Energia Utilizzata**: Gli attuatori possono essere alimentati da diverse fonti di energia, ciascuna adatta a specifiche applicazioni:
   
 
-<img src="assets/smart_IoT/lez.5/tipo_energia_attuatore.png" alt="tipi di energia degli attuatori" width="100%">
+<img src="lesson-img/lez.5/tipo_energia_attuatore.png" alt="tipi di energia degli attuatori" width="100%">
 
 > **Riassumendo:**
-<img src="assets/smart_IoT/lez.5/sensori-attuatori-loop.png" alt="Loop del meccanismo di sensori e attuatori" width="100%">
+<img src="lesson-img/lez.5/sensori-attuatori-loop.png" alt="Loop del meccanismo di sensori e attuatori" width="100%">
 Il sensore è un dispositivo che permette di percepire una grandezza fisica del mondo reale, la misura e la traduce digitalmente in un segnale elettrico, che può costituire l'input per un sistema intelligente. Questo sistema intelligente prenderà una determinata decisione e agirà su uno o più attuatori, i quali, attraverso un lavoro utile, andranno a modificare lo stato delle cose. Modificando lo stato fisico delle cose, si avrà un cambiamento nella percezione dell'ambiente. Questo meccanismo può essere paragonato al modello sensi/elaborazione/azione dell'uomo.
 
 ### Dispositivi di Elaborazione (Processing Devices)
@@ -1126,7 +1126,7 @@ Due dei dispositivi di elaborazione più conosciuti e utilizzati sono **Arduino*
 
 Gli oggetti intelligenti possono essere connessi tra loro formando una **rete di sensori**, dove più dispositivi collaborano per monitorare e controllare l'ambiente in maniera coordinata. In queste reti, gli oggetti comunicano tra loro e condividono i dati raccolti per prendere decisioni collettive e migliorare l'efficienza del sistema.
 
-<img src="assets/smart_IoT/lez.5/esempio-rete-sensori.png" alt="esempio di rete di sensori" width="100%">
+<img src="lesson-img/lez.5/esempio-rete-sensori.png" alt="esempio di rete di sensori" width="100%">
 
 #### Tipologie di Reti di Sensori
 
@@ -1166,7 +1166,7 @@ Gli oggetti intelligenti possono essere connessi tra loro formando una **rete di
    - **Velocità di trasmissione limitata**: Le WSN sono spesso caratterizzate da velocità di trasferimento dati inferiori rispetto a reti cablate, il che può limitare l'applicazione per flussi di dati ad alta velocità.
    - **Consumo energetico ridotto**: Sebbene i dispositivi wireless richiedano più energia rispetto a quelli cablati, le WSN devono comunque mantenere un consumo relativamente basso per prolungare la durata delle batterie dei sensori.
 
-<img src="assets/smart_IoT/lez.5/fog-computing.png" alt="Processo di fog computing" width="100%">
+<img src="lesson-img/lez.5/fog-computing.png" alt="Processo di fog computing" width="100%">
 
 # Wireless Communication Basics
 > Finora abbiamo parlato dei nostri "things: sensori e attuatori" all'interno del modello *Core IoT Functional Stack*. Ora, però, approfondiamo i due livelli *Data Link* e *Physical* del modello ISO/OSI, concentrandoci sulle comunicazioni senza fili e sulle architetture e standard che possiamo usare per mettere in comunicazione questi sensori.
@@ -1175,11 +1175,11 @@ Le comunicazioni senza filo si basano sul concetto di onda. "Un'onda è un distu
 
 Fondamentalmente, è un cambiamento (ripetuto nel tempo) di qualche attributo fisico che si propaga attraverso un mezzo.
 
-<img src="assets/smart_IoT/lez.5/onda.png" alt="l'onda" width="100%">
+<img src="lesson-img/lez.5/onda.png" alt="l'onda" width="100%">
 
 Il movimento dell'onda avviene quando vediamo qualcosa o quando parliamo (tramite l'aria, c'e una compressione delle particelle e una dilatazione, puo anche ripetersi con forze differenti, ...). Questo trasferimento non e solo un trasferimento di massa ma anche un trasferimento di informazione.
 
-| ![l'onda elettromagnetica](assets/smart_IoT/lez.5/onda-EM.png) | ![grafico onda elettromagnetica](assets/smart_IoT/lez.5/onda-EM-grafico.png) |
+| ![l'onda elettromagnetica](lesson-img/lez.5/onda-EM.png) | ![grafico onda elettromagnetica](lesson-img/lez.5/onda-EM-grafico.png) |
 |:--------------------------------------------------------------:|:--------------------------------------------------------------------------:|
 | l'onda elettromagnetica                                         | grafico onda elettromagnetica       
 
@@ -1189,12 +1189,12 @@ L'onda più interessante per noi è quella che nasce dalla combinazione di un ca
 - asse verticale: ampiezza (l'ammontare del disturbo)
 
 
-| ![somma di funzioni sinusoidali](assets/smart_IoT/lez.5/onda-fourier.png) | Queste onde sono sinusoidali e possono essere scomposte come somma di funzioni sinusoidali, secondo la trasformata di Fourier. Posso usare l'onda elettromagnetica per trasportare un'informazione da A a B in assenza di comunicazione via cavo. La uso come mezzo di trasmissione. |
+| ![somma di funzioni sinusoidali](lesson-img/lez.5/onda-fourier.png) | Queste onde sono sinusoidali e possono essere scomposte come somma di funzioni sinusoidali, secondo la trasformata di Fourier. Posso usare l'onda elettromagnetica per trasportare un'informazione da A a B in assenza di comunicazione via cavo. La uso come mezzo di trasmissione. |
 |-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 <br>
 
-<img src="assets/smart_IoT/lez.5/caratteristiche-onda.png" alt="Caratteristica dell'onda" style=" width:45%; display: flex; float:left">
+<img src="lesson-img/lez.5/caratteristiche-onda.png" alt="Caratteristica dell'onda" style=" width:45%; display: flex; float:left">
 
 **Caratteristiche delle onde:**
 
@@ -1205,7 +1205,7 @@ L'onda più interessante per noi è quella che nasce dalla combinazione di un ca
 
 La luce non è altro che la rifrazione di onde elettromagnetiche. **Lo spettro del visibile** comprende forme d'onda con specifiche frequenze e lunghezze d'onda. Ciò che noi percepiamo con la vista ha una frequenza compresa tra 750 THz e 300 THz.
 
-<img src="assets/smart_IoT/lez.5/EM-spettro.png" alt="Spettro EM" style=" width:45%; display: flex; float:right">
+<img src="lesson-img/lez.5/EM-spettro.png" alt="Spettro EM" style=" width:45%; display: flex; float:right">
 Lo spettro del visibile è solo un piccola frazione dello spettro em
 
 >Ma quali sono le frequenze dello spettro elettromagnetico che hanno per noi per comunicare senza fili?
@@ -1232,13 +1232,13 @@ Ci sono tre tecniche principali per trasmettere dati digitali usando onde elettr
 
 In ciascuna di queste tecniche, si parte da un **segnale portante** che viene modificato per trasmettere il segnale desiderato, come un **segnale digitale**. Queste tre tecniche permettono di combinare i due segnali, così che chi riceve il segnale alterato, conoscendo le caratteristiche della portante, possa decodificarlo correttamente.
 
-| ![Tecnica ASK](assets/smart_IoT/lez.5/tecnica-ASK.png) | **ASK (Amplitude Shift Keying):** Devo cambiare (ridurre o ampliare) l'ampiezza della portante sulla base del segnale che voglio trasmettere. |
+| ![Tecnica ASK](lesson-img/lez.5/tecnica-ASK.png) | **ASK (Amplitude Shift Keying):** Devo cambiare (ridurre o ampliare) l'ampiezza della portante sulla base del segnale che voglio trasmettere. |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 
-| ![Tecnica FSK](assets/smart_IoT/lez.5/tecnica-FSK.png) | **FSK (Frequency Shift Keying):** Devo alterare la frequenza; al posto di alzare e abbassare il volume, renderò più lento o più veloce il suono. |
+| ![Tecnica FSK](lesson-img/lez.5/tecnica-FSK.png) | **FSK (Frequency Shift Keying):** Devo alterare la frequenza; al posto di alzare e abbassare il volume, renderò più lento o più veloce il suono. |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 
-| ![Tecnica PSK](assets/smart_IoT/lez.5/tecnica-PSK.png) | **PSK (Phase Shift Keying):** Mi dice che il mio segnale, che si muove con un certo andamento, deve essere invertito in qualche modo. |
+| ![Tecnica PSK](lesson-img/lez.5/tecnica-PSK.png) | **PSK (Phase Shift Keying):** Mi dice che il mio segnale, che si muove con un certo andamento, deve essere invertito in qualche modo. |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 
 > Come si fa a trasmettere e risalire?
@@ -1335,7 +1335,7 @@ Ci sono due situazioni particolari:
 n una situazione **wall-powered**, la corrente non è un limite per la comunicazione. In una situazione con batteria, ho molta più flessibilità, ma devo affrontare il problema del mantenimento, ovvero come ripristinare la batteria quando si scarica. Questo ha portato allo sviluppo di diverse soluzioni per consumare poco ma garantire una comunicazione a lunga distanza, come le tecnologie **LPWA**.
 
 ## Topologia di rete
-<img src="assets/smart_IoT/lez.6/Tipi-nodi.png" alt="Tipi di nodi" style=" width:45%; display: flex; float:right">
+<img src="lesson-img/lez.6/Tipi-nodi.png" alt="Tipi di nodi" style=" width:45%; display: flex; float:right">
 
 Ci sono diversi tipi di nodi:
 
@@ -1344,7 +1344,7 @@ Ci sono diversi tipi di nodi:
 
 In una **rete long range**, tipicamente utilizzo una topologia a stella (ovviamente dipende da quello che voglio fare, ma generalmente è così), come nella trasmissione telefonica, dove i reduced sono i nostri smartphone e i full sono le centrali o i ripetitori.
 
-<img src="assets/smart_IoT/lez.6/nodo-peer-2-peer.png" alt="nodo peer to peer" style=" width:30%; display: flex; float:right">
+<img src="lesson-img/lez.6/nodo-peer-2-peer.png" alt="nodo peer to peer" style=" width:30%; display: flex; float:right">
 
 In una **rete medium range**, tipicamente utilizzo anch'essa una topologia a stella.
    > **Esempio:** un Wi-Fi access point, dove ho il gateway collegato al muro con alimentazione e fibra ottica, e tutti i dispositivi si collegano al gateway per comunicare. In alternativa, utilizzo la configurazione **peer-to-peer**, dove qualsiasi nodo full può comunicare con qualsiasi altro nodo.
@@ -1357,7 +1357,7 @@ In una **rete large**, utilizzo tipicamente la topologia a mesh, poiché ho nodi
 - **class 0:** meno di 10kb di memoria ram, meno di 100kb di memoria flash, tipicamente alimentati a batteria, implementano uno stack ip completo
 - **class 1:** hanno 10kb di memoria ram, 100kb di memoria flash, non implementano uno stack ip completo
 - **class 2:** esp32, arduino, raspberry pi
- <img src="assets/smart_IoT/lez.6/limiti-devices.png" alt="Limiti dei dispositivi" style=" width:40%; display: flex; float:right">
+ <img src="lesson-img/lez.6/limiti-devices.png" alt="Limiti dei dispositivi" style=" width:40%; display: flex; float:right">
 
 ### Reti di dispositivi con limitazioni
 

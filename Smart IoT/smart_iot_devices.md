@@ -1444,106 +1444,203 @@ La topologia è già predisposta perché si basa sulle linee elettriche. Esiste 
 #### Sicurezza
 A livello di sicurezza, è simile a **802.15.4g** con AES, ma tutti coloro che sono collegati alla rete elettrica sono esposti a quei dati e quindi potrebbero ascoltare le comunicazioni.
 
-#### Altri Standard
-- **IEEE 802.11ah**
-Entra dentro a quello che si intente per WI-Fi. È stato concepito in un sistema ben diverso. 
-no sub-GHz suppòort for bettere penetration, not tuned for low power, not suited for lange nummergb o connected devices. Lo stesso standard ha diverse varianti, che utlizza sempre queste tecnologie di base ma aggiunge o toglie delle particolarità di questo standard. 
-IEEE 802.11 ah è una variante per ... 
+## Altri Standard
+### **IEEE 802.11ah ("Wi-Fi HaLow")**
+   Il Wi-Fi è nato per connettere dispositivi a breve distanza, principalmente in ambienti domestici o aziendali, con priorità su velocità e larghezza di banda, non ottimizzato per grandi numeri di dispositivi o per risparmio energetico. Le tecnologie Wi-Fi tradizionali non utilizzano bande sub-GHz, che offrono maggiore penetrazione attraverso pareti e ostacoli, e non sono progettate per basse potenze o per supportare una vasta quantità di dispositivi connessi contemporaneamente.
 
-a livello fisico :
-non abbiamo licenza per rcomunicare e queste bande di licenza sono country-dependent. per sapere quali sono le bande di frequenza, 
+   #### IEEE 802.11ah: La Variante per l'IoT
+   IEEE 802.11ah è una variante del Wi-Fi progettata specificamente per risolvere i limiti delle versioni precedenti nel contesto dell'Internet of Things (IoT), dove i requisiti di connessione sono molto diversi.
 
-a livello di mac:
-ottimizzazione per dispositivi IoT
-Largo numero di dispositivi (8192)
-Più efficente (MAC header reduced)
-Target wake time (Capacità di definire degli slot temporali nel quale far connettere i dispositivi.) questo permette ai dispositivii che intrare dentro ad uno stato chiamato power sceiding;
-la settorizzazione a che fare con degli slot dove l'access point assegna un certo numero di dispositivi ad un sottogruppo. Vado a separare e garantire le risorse. 
+   #### Livello Fisico:
+   Banda sub-GHz non licenziata: Le comunicazioni avvengono su frequenze sub-GHz (tipicamente intorno a 900 MHz), che variano da paese a paese. Queste frequenze offrono maggiore portata e migliore penetrazione degli ostacoli, ma a velocità inferiori rispetto alle bande tradizionali a 2.4 GHz e 5 GHz.
+   Supporto per grandi distanze: La tecnologia può raggiungere distanze fino a 1 km a bassa velocità dati (es. 100 kbps).
 
-Topologia
-Per quanto riguarda la topologia, dove abbimo quelli che niu chiamiamo "access point", ... 
+   #### Livello MAC:
+   IEEE 802.11ah introduce diverse ottimizzazioni per dispositivi IoT:
+   - Supporto per un grande numero di dispositivi: Fino a 8192 dispositivi possono connettersi a un singolo access point (AP), una capacità enormemente superiore rispetto agli standard Wi-Fi tradizionali.
+   - Efficienza migliorata: L'header MAC è stato ridotto per minimizzare l'overhead, rendendo la trasmissione dei dati più efficiente, specialmente per pacchetti di piccole dimensioni tipici dei dispositivi IoT.
+   - Target Wake Time (TWT): L'AP può assegnare finestre temporali specifiche in cui i dispositivi possono accedere alla rete. Quando un dispositivo non ha bisogno di comunicare, può entrare in uno stato di risparmio energetico chiamato power-saving mode, riducendo significativamente il consumo di batteria.
+   - Settorizzazione: Gli access point possono usare antenne settoriali per dividere i dispositivi connessi in sottogruppi, separando così il traffico e allocando meglio le risorse, riducendo le collisioni e ottimizzando il controllo dell'accesso.
 
-- **LoRaWAN**
-parte della famiglia LPWA; especially suited for low power and wide range configurations. Developed by the LoRa Alliance.
-Technically, LoRA is the name of the .... Usa bande molto basse che ci permettono di andare molto lontano.
+   #### IEEE 802.11ah: Il Wi-Fi per l'IoT
+   IEEE 802.11ah porta il Wi-Fi in una nuova dimensione, rendendolo adatto a grandi reti di dispositivi a bassa potenza come sensori e dispositivi IoT, mantenendo la stessa base tecnologica del Wi-Fi tradizionale ma con ottimizzazioni specifiche per portata, risparmio energetico e gestione di grandi quantità di dispositivi.
 
-- **5G**
-....
+### **LoRaWAN**
+   #### LPWA Network:
+   - Parte della famiglia Low-Power Wide-Area (LPWA), progettata per comunicazioni a bassa potenza e ampia copertura.
+   - Adatta per configurazioni con dispositivi che richiedono lunghe distanze di trasmissione con un basso consumo energetico.
+   - Sviluppata dalla LoRa Alliance.
+
+   #### Livello Fisico (PHY):
+   - LoRa (Long Range) è il nome dello strato fisico (PHY), mentre LoRaWAN è l'intero stack di protocollo.
+   - Chirp Spread Spectrum (CSS): Tecnologia di modulazione che aumenta la robustezza del segnale su lunghe distanze.
+   - Bande sub-GHz: Variano in base al paese, simili a quelle utilizzate da IEEE 802.11ah.
+   - Adaptive Data Rate (ADR): Ottimizzazione dinamica della velocità di trasmissione per migliorare l'efficienza e risparmiare energia.
+   - Bassa velocità, lunga portata: Può coprire distanze fino a 10 km.
+
+   #### Livello MAC, Topologia e Sicurezza:
+   - MAC frame estremamente semplice, ridotto all'essenziale per minimizzare il consumo di risorse.
+   - Topologia a stella (Star of Stars):
+   - Stelle con gateway come nodo centrale.
+   - I gateway possono essere collegati opzionalmente in una topologia a stella con un server centrale.
+   - Sicurezza: Crittografia e autenticazione basate su AES (Advanced Encryption Standard).
+
+### **5G**
+   #### Punti chiave su 5G
+   #### Frequenze:
+   - Frequenza range 1: Da 600 MHz a 6 GHz (simile a 4G), con focus su 3.5-4.2 GHz.
+   - Frequenza range 2: Onde millimetriche da 25 a 60 GHz, per alte prestazioni ma bassa penetrazione.
+   #### Tecnologia:
+   - Adaptive beamforming: Trasmissione direzionale, non più broadcast in tutte le direzioni, ottimizzando potenza e copertura.
+
+   #### Vantaggi rispetto al 4G:
+   - Velocità maggiore: Fino a 20 Gbps di picco in download (contro 1 Gbps del 4G).
+   - Minore latenza: Attesa media di 1-2 ms (contro 50 ms del 4G).
+   - Più connessioni simultanee: Capacità di gestire 20 volte più dispositivi.
+
+   #### Svantaggi:
+   - Segnali ad alta frequenza bloccati facilmente da ostacoli.
+   - Necessità di molte piccole antenne a bassa potenza, una ogni 250 metri in aree urbane, aumentando la complessità infrastrutturale.
+   - Problemi in aree rurali: Meno antenne, difficoltà a garantire copertura continua.
+
+   Il 5G offre velocità e reattività elevate, ma richiede una rete di infrastrutture molto più densa rispetto al 4G, soprattutto nelle città.
+
+---
 
 ##### Lezione 7 - 22 Ottobre 2024
+<img src="lesson-img/lez.7/tensione-corrente-pressione.png" alt="Elementi base dell'elettronica" width="50%" style="display: flex; float:right">
 
 # Fondamenti dei principi di elettronica.
 
-questi dipositivi sono animati perchè chè qualcuno o qualcosa che li mette in funzione. QUesto oerchè entrano in gioco la tensione e la corretnte. Ogni dispositivo prende l'energia per genrare qualche cosa. ogni batteria deve essere calmierata. 
+I dispositivi elettronici funzionano grazie a un elemento esterno che li mette in azione, in particolare la tensione e la corrente. Ogni dispositivo preleva energia per generare un determinato risultato. È importante che ogni batteria venga regolata adeguatamente per garantire un funzionamento sicuro e stabile.
 
-- tensione : si misra in Volt ì, ha una definizione piùttosto crittica. é il costo di energea che devo muovere dal punto più negativo al posto più cpposotivo.  Importante andare a parlare di circuito. La pressione di misura ta 2 punti di questi circuitpo. Quesnsta energia di misura in clo..
-Il trasformatore modifica la tensione di un sisdpositivo, motli hanno bisgno dell'aergia per gunoare mnetre ... é il costo di energia che devo pagare. 
-- la corrente è il flusso di una carica eletric a che passa attrerso un punto. la cooorente mi serrve per capire quanto il dispositivi staconsumnndo in un determinato istante. In ampere viene misurato. Un'ampere è il flusso  di un cono di camprio per sencondo.
+- **La tensione**(misurata in Volt) rappresenta il costo energetico necessario per spostare una carica positiva da un punto con potenziale più basso (negativo) a uno con potenziale più alto (positivo). Viene definita anche come differenza di potenziale o forza elettromotrice e si misura tra due punti di un circuito. È importante parlare di come la tensione si applichi all'interno di un circuito, poiché essa rappresenta la "pressione" che spinge le cariche elettriche lungo i componenti.
+L'unità di misura della carica elettrica è il Coulomb, che corrisponde alla carica di circa \(6 \times 10^{18}\) elettroni
 
-La tensione e la coorente possono essere usati in due modi particolari; la tensione a corrente alternata vuol dire che la tensione, ha un moto oscillatorio mentre a tensione continua eè fisso. 
-la corrente alternate è quella che unsiamo quando le centrali ce le mandano. La corrente corrnete continua. 
+   I trasformatori hanno il compito di modificare la tensione di un dispositivo per adattarla alle esigenze di funzionamento. In generale, la tensione rappresenta il costo energetico necessario per alimentare dispositivi o far funzionare macchine elettriche, e questa energia si misura in Coulomb.
 
-La necessità di usare entrambe entra nel fatto che hanno caratteristiche diverse.può avere luveelli di tensione molto alti per coprire lunghe disatanze, la tensione cinitnua, ....
-- la resistenza si misura in ohm, questa misura ci duce quanto uo ioììvlgio rugyurrabul fkussi di cirrebte, ci possono essere due omdnti di sivraprosucilone di corrente e e id energia. generano colore. 
+- **La corrente** (misurata in Ampere) rappresenta il flusso di carica elettrica che passa attraverso un punto di un circuito. In particolare, la corrente serve a determinare quanto un dispositivo sta consumando in un determinato istante. Per convenzione, il flusso di corrente è considerato come il movimento di cariche positive dal punto con potenziale più alto (positivo) a quello con potenziale più basso (negativo).
 
-le resistenze disperdono enrgia, come le usiamo all'interno di un circuito? esistono dei sistemi con picoclissime componenti che hanno una forma paricolare e ridotta e queste resistenze sono un filoetto,sulla ualer sono disegnate delle lineette per sapere quale resistenza usa. 
-Le resistenze a seconda di quanto costino sono di 3 tipi, da 4/5/6 bande colorate sulla base degli anellini che hanno e ugnona di queste hanno un significato particolare. quelli a 3 / 4 bande ci aiutano a leffere la resistenza. 
-i prmi 2 o i primi 3 vanno letti come DIGTS il 3 anellino o il 4 sono il moltilicatore l'ultimo anellino se in 4 bande son la tonnellarnza. quelli da 5/6 bande mi dice come si comporta la resistenza della emissione di calore. Può esserci una variazioen della resistenza sulla base della variazione di grado. le più comuni sono a 5 bande. 
-COme leggerle?
-il primoe sempio mi dice: 
-prime due digit: 10 (per colore)
-Multiplier: 1k 
-tollerance + - 5%
+   L'unità di misura della corrente è l'Ampere (A), in onore di André-Marie Ampère, e si definisce come il flusso di un Coulomb di carica per secondo.
 
-[foto da mettere del prof]
+## AC o DC
+<img src="lesson-img/lez.7/AC-o-DC.png" alt="Tensione continua od Alternata" width="50%" style="display: flex; float:right">
 
-per leggere la resistenza la parte più libera è alla fine
+La tensione e la corrente possono essere utilizzate in due modalità principali: corrente alternata (AC) e corrente continua (DC).
 
-questi ultimi 3 elementi si influenzano sulla base della legge di ohm'm
-La corrente che attraversa un conduttore tra due punti è direttamente proporzionale alla tensione applicata tra i due punti
+- **Corrente Alternata (AC):** in AC, il flusso di carica cambia direzione periodicamente. Questo tipo di corrente è utilizzato principalmente per distribuire energia elettrica a case, edifici e uffici, grazie alla sua capacità di essere facilmente trasportata su lunghe distanze. Le centrali elettriche utilizzano la corrente alternata per fornire energia, poiché può essere trasformata a livelli di tensione molto alti, riducendo le perdite di energia durante il trasporto.
+
+- **Corrente Continua (DC):** a differenza dell'AC, la corrente continua fornisce una tensione o corrente costante, che fluisce in una sola direzione. Anche se la tensione e la corrente in DC possono variare nel tempo, la direzione del flusso non cambia. Dispositivi alimentati a batteria, alimentatori da muro (con adattatori AC-DC) e cavi USB utilizzano tutti la corrente continua.
+
+## Storia di AC vs DC:
+Negli anni 1880, si scatenò una vera e propria "guerra delle correnti" tra i sostenitori della corrente alternata (AC) e della corrente continua (DC).
+
+*Nel 1886, la Ganz Works*, una compagnia elettrica di Budapest, elettrificò tutta Roma utilizzando la corrente alternata.
+Nel frattempo, *Thomas Edison*, uno dei principali sostenitori della corrente continua, costruì 121 stazioni di energia DC negli Stati Uniti entro il *1887*. Edison proponeva un sistema di piccole centrali locali per alimentare singoli quartieri o sezioni della città. Tuttavia, la corrente continua presentava un grosso limite: non poteva essere facilmente trasformata a voltaggi elevati. Questo significava che le centrali dovevano essere costruite molto vicine agli utenti, entro circa 1 miglio di distanza, per ridurre le perdite di energia.
+
+La situazione cambiò quando *George Westinghouse* acquistò i brevetti di Nikola Tesla per i motori e la trasmissione in corrente alternata (1888). Grazie a Tesla, Westinghouse poté sviluppare un sistema economico per aumentare la tensione della corrente alternata a migliaia di volt per il trasporto su lunghe distanze, e poi ridurla nuovamente a livelli utilizzabili all'arrivo. A tensioni più elevate, lo stesso livello di potenza poteva essere trasmesso con correnti più basse, riducendo così le perdite di energia dovute alla resistenza nei cavi. Questo consentiva di costruire grandi centrali elettriche molto più lontano dagli utenti finali, e di servire un numero maggiore di persone e edifici.
+
+- **La resistenza elettrica**, misurata in Ohm (Ω), rappresenta l'opposizione che un materiale offre al passaggio della corrente elettrica. La resistenza è un componente elettrico passivo, spesso realizzato con materiali poco conduttori come il carbonio, utilizzato principalmente per ridurre il flusso di corrente in un circuito. È fondamentale per determinare quanta energia viene dissipata sotto forma di calore durante il passaggio della corrente. Una resistenza eccessiva può portare a un riscaldamento indesiderato e a inefficienze energetiche.
+
+La resistenza è caratterizzata anche dalla sua capacità di dissipare potenza, cioè dalla quantità di energia che può disperdere senza danneggiarsi. La sua misura, in Ohm, segue la legge di Georg Ohm, che afferma che la resistenza di un componente è proporzionale alla tensione applicata (in volt) e alla corrente che lo attraversa (in ampere).
+
+Le resistenze all'interno di un circuito servono a dissipare energia e a regolare il flusso di corrente. Esistono componenti molto piccole, che hanno una forma compatta e sono caratterizzate da **bande colorate** stampate sulla loro superficie. Queste bande indicano il valore della resistenza. A seconda della loro configurazione, le resistenze si distinguono in tre categorie: a 4, 5 o 6 bande colorate, ognuna con un significato specifico.
+
+## Come si leggono le resistenze:
+
+<img src="lesson-img/lez.7/tabella-resistenza.png" alt="tabella-resistenza" width="50%" style="display: flex; float:right" >
+
+Le resistenze a **3 o 4 bande** utilizzano le prime due o tre bande per rappresentare i **digit** (le cifre del valore), mentre **la terza o quarta banda** rappresenta il **moltiplicatore**. **L'ultima banda**, se presente, indica la **tolleranza**, ovvero la precisione del valore della resistenza.
+
+Le resistenze a **5 o 6 bande** forniscono informazioni aggiuntive: **le prime tre** bande indicano i **digit**, la **quarta banda** è il **moltiplicatore** e l'**ultima** banda indica la **tolleranza**. Nei modelli a **6 bande**, la sesta banda rappresenta la variazione della resistenza rispetto alla temperatura, ovvero come la resistenza si comporta quando il calore aumenta. Le resistenze a 5 bande sono le più comuni.
+
+   >**Esempio di lettura:**
+   >
+   >Prime due cifre (digit): 10 (in base al colore delle prime due bande)
+   ><br> Moltiplicatore: 1k (k = 1000)
+   ><br>Tolleranza: ±5%
+
+
+Per leggere correttamente il valore di una resistenza, la parte con più spazio vuoto si trova alla fine del componente, indicandoti da quale lato iniziare la lettura.
+
+## Legge di Ohm
+<img src="lesson-img/lez.7/legge di ohm.png" alt="legge di ohm" width="50%" style="display: flex; float:left">
+
+La **legge di Ohm** stabilisce che la **corrente** che attraversa un conduttore tra due punti è direttamente proporzionale alla **tensione** applicata tra di essi e inversamente proporzionale alla **resistenza**. Questo significa che, a parità di resistenza, un aumento della tensione comporta un aumento della corrente, mentre a parità di tensione, una resistenza maggiore riduce il flusso di corrente.
+<br> 
+<br> 
+Gli ultimi tre elementi della resistenza (i digit, il moltiplicatore e la tolleranza) si influenzano reciprocamente in base a questo principio, determinando il comportamento complessivo della resistenza all'interno del circuito.
 
 
 ## Potenza
+<img src="lesson-img/lez.7/potenza.png" alt="potenza" width="50%" style="display: flex; float:left">
+La potenza quantifica il tasso di trasferimento di energia all'interno di un circuito ed è definita come il lavoro per unità di tempo consumato da un dispositivo. Viene misurata in Watt (W), in onore di James Watt. In altre parole, la potenza rappresenta quanta energia viene trasferita o consumata in un certo intervallo di tempo.
 
-misurat ain watt che chve praticamente il lavoro /tempo 
+<br> 
+<br>
+<br> 
+<br>
 
-Definizione: 
-▸ Quantifica il tasso di trasferimento di energia 
-▸ Lavoro per unità di tempo consumato da un circuito 
-▸ Misurato in [Watt/W] (James Watt)
+## Legge di Kirchhoff 
 
-## Legge di Kirchhoff delle Correnti (Conservazione della carica): 
-    La somma delle correnti che entrano in un nodo (punto) di un circuito è uguale alla somma delle correnti che escono.
+### delle Correnti (Conservazione della Carica)
+
+> La somma delle correnti che confluiscono in un nodo (punto) di un circuito è equivalente alla somma delle correnti che ne escono.
 
 In altre parole, in qualsiasi punto di un circuito elettrico, la quantità di corrente che entra deve essere uguale alla quantità di corrente che esce.
 
-La seconsa leffe dice che la tensione prodotta deve essere uguale alla tensione usata nel circuito. In un circuito chiuso, l'energia prodotta deve essere = ad energia consumata. Non si può usare più corrente di quanta ne producete. 
-Per provare esiste un programmainio per poter creare a fare un circuito elettrico. [https://tinyurl.com/hqg6r4n]
+### sulle Tensioni
+> La legge di Kirchhoff sulle tensioni afferma che la tensione prodotta in un circuito deve essere uguale alla tensione consumata in un ciclo. 
 
-Come colleghiamo le resistenze?
-Le resistenze, se le combiniamo, il comportamento varia a seconda con cosa le combiante: si possono mettere in serie o parallele. 
-Le resistenze in serie possono essere connesse tra testa e cosa, in parallelo sonon....
+In altre parole, la somma delle tensioni attorno a qualsiasi circuito chiuso è zero. Questo implica che non si può utilizzare più energia di quella che viene effettivamente prodotta.
 
-se le collegate in serie creano una resistenza più grande. questo cosa porta? ad avere la corrente la ... 
+La seconda legge di Kirchhoff afferma che la tensione prodotta deve essere uguale alla tensione utilizzata nel circuito. In un circuito chiuso, l'energia prodotta deve essere pari all'energia consumata. Non si può utilizzare più corrente di quanta se ne produca. 
 
-se in paraallelo si ha unsa resistenza più piccola percui abbiamo il prodotto delle resistenze, ....
+Per verificare questo principio, è possibile utilizzare un programma per creare circuiti elettrici. Puoi trovare uno strumento utile qui: [https://tinyurl.com/hqg6r4n].
 
-Oltre alle resistenze abbiamo altri due sistemi di utilizzo, che sono i capacitors e gli inducitors.
+## Maggiori informazioni sulle Resistenze (Serie vs Parallel)
+<img src="lesson-img/lez.7/resistenze-serie-parallelo.png" alt="resistenza in serie e parallelo" width="75%" style="display: flex; float:left">
 
-# Concetto: l'energia si accumula nel tempo
-Capacitore
+Quando colleghiamo le resistenze, il comportamento del circuito varia a seconda di come vengono combinate: si possono disporre in serie o in parallelo.
+
+<br>
+
+### Resistenze in Serie
+Se le resistenze sono collegate in serie, esse sono disposte una dopo l'altra. In questo caso, la resistenza totale aumenta, creando una resistenza equivalente maggiore. La formula per calcolare la resistenza totale 
+
+<img src="lesson-img/lez.7/resistenze-in-serie.png" alt="resistenza in serie" width="50%" style="display: flex; float:left">
+
+Questo aumento della resistenza comporta una riduzione della corrente che attraversa il circuito, poiché, secondo la legge di Ohm, la corrente è inversamente proporzionale alla resistenza.
+
+<br>
+
+### Resistenze in Parallelo
+Se le resistenze sono collegate in parallelo, esse sono disposte su percorsi separati tra i medesimi punti. In questo caso, la resistenza totale è inferiore a quella di ciascuna resistenza individuale, creando una resistenza equivalente più piccola. La formula per calcolare la resistenza totale R_t in parallelo è:
+
+<img src="lesson-img/lez.7/resistenze-parallelo.png" alt="resistenza in parallelo" width="50%" style="display: flex; float:left">
+
+Collegare le resistenze in parallelo permette di aumentare il flusso di corrente nel circuito, poiché ciascuna resistenza fornisce un percorso alternativo per la corrente.
+
+<br>
+
+## Concetto: l'energia si accumula nel tempo
+
+### Capacitore
 - Accumula carica elettrica, costruendo tensione (voltaggio) nel tempo.
-- Può essere polarizzato (alcuni richiedono un collegamento corretto dei terminali positivo e negativo).
+- Può essere polarizzato, il che significa che alcuni richiedono un collegamento corretto dei terminali positivo e negativo.
 - L'energia immagazzinata è sotto forma di campo elettrico.
-
-Induttore
+- **Utilizzi comuni**:
+   -  *Filtri*: Utilizzati in circuiti per filtrare determinate frequenze (es. passa-alto, passa-basso).
+   -  *Buffer di energia*: Immagazzinano energia per rilasciarla quando necessario, come nei circuiti di alimentazione stabilizzati.
+### Induttore
 - Accumula energia costruendo corrente nel tempo.
 - Non è polarizzato, quindi può essere collegato in qualsiasi direzione.
 - L'energia immagazzinata è sotto forma di campo magnetico.
+- **Utilizzi comuni**:
+   - Filtraggio delle correnti alternate e gestione del comportamento transitorio nei circuiti.
 
-Utilizzi comuni
-- Filtri: utilizzati in circuiti per filtrare determinate frequenze (es. passa-alto, passa-basso).
-- Buffer di energia: immagazzinano energia per rilasciarla quando necessario, come nei circuiti di alimentazione stabilizzati.
+### Altri Componenti Elettrici
+Oltre alle resistenze, i condensatori e gli induttori sono componenti fondamentali nei circuiti elettrici. Questi elementi svolgono un ruolo cruciale nel design e nel funzionamento dei circuiti, contribuendo a stabilizzare le tensioni e a garantire un flusso di corrente regolare.
 
 # Arduino - Introduzione
 

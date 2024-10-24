@@ -1625,7 +1625,7 @@ Collegare le resistenze in parallelo permette di aumentare il flusso di corrente
 
 ## Concetto: l'energia si accumula nel tempo
 
-### Capacitore
+### Condensatore
 - Accumula carica elettrica, costruendo tensione (voltaggio) nel tempo.
 - Può essere polarizzato, il che significa che alcuni richiedono un collegamento corretto dei terminali positivo e negativo.
 - L'energia immagazzinata è sotto forma di campo elettrico.
@@ -1643,75 +1643,211 @@ Collegare le resistenze in parallelo permette di aumentare il flusso di corrente
 Oltre alle resistenze, i condensatori e gli induttori sono componenti fondamentali nei circuiti elettrici. Questi elementi svolgono un ruolo cruciale nel design e nel funzionamento dei circuiti, contribuendo a stabilizzare le tensioni e a garantire un flusso di corrente regolare.
 
 # Arduino - Introduzione
+Arduino è una piattaforma open-source utilizzata per costruire progetti di elettronica interattiva. Combina un hardware flessibile e facile da usare con un ambiente di sviluppo software altrettanto intuitivo, permettendo a chiunque, dagli hobbisti agli ingegneri, di creare progetti che collegano il mondo virtuale al mondo fisico.
 
-Theory: intrduzione di arduino, hardware sistem structure, programming structure
+**Struttura Hardware**
+Un tipico dispositivo Arduino include una CPU simile a quella di un computer, una porta USB per il collegamento al PC (che serve per programmare il dispositivo e alimentarlo), e una serie di porte di input/output (I/O) digitali e analogiche. Il sistema è open-source, il che significa che sia l'hardware che il software sono liberamente disponibili e modificabili da chiunque. [foto Arduino UNO]
 
-Microcontrollore: che cos'è?
-é un sisrtemache ci permette dic collegare qualcosa che sta nel modno virtual econ il mondo reale, quindi stiamo parlando un programma come mondo virtuale e con delle macchine che lavorano nel mondo fisico, quanto vale per i sensori che misurano una grandezza fisica. 
-Il micro controllore lo possiamo pensare come un "piccolissimo computer", a cui posso agganciare degli input (sensori) come degli output(attutatori).
+**Struttura del Programma**
+Un programma per Arduino, chiamato "sketch", viene scritto in un linguaggio specifico basato su C/C++ e caricato sulla scheda tramite un software chiamato Integrated Development Environment (IDE). Il codice, una volta caricato, verrà eseguito in modo autonomo dalla scheda Arduino, anche se questa viene scollegata dal computer e alimentata in un altro modo.
 
-Arduino UNO vede l'uso di una cpu di un computer, una porta usb per far passare enrgia. Questo dispositivo funziona con una serie di porte INPUT/output digitali e INPUT/output analogiche. cosa interessante di arduino è che è un sistema opensurces perchui abbiamo un sistema hardware comepletamente aperto. questo dispositivo poi possiamo istruirlo verso il nostro computer.
-faremo dei piccolissimi programmai che saranno prima dentro al nostro computer e poi lo esegue all'infinità anche se viene staccato dalla corrente. Abbiamo bisogno di un ambiente di sviluppo. Essendo un sistema molto sensibile possiamo usare tanttismi sensori.
-Il vantaggio sono tutte le porte di input e di output.
-Non è l'unico dipsositivo che è facilemte utilizzabile come questo e poi abbiamo il raspberry Pi che useremo più avanti. 
+## Microcontrollori
+I microcontrollori sono il cuore di Arduino. Essi agiscono come "piccolissimi computer", in grado di connettere il mondo virtuale (il programma) al mondo reale (sensori e attuatori). Gli input possono provenire da vari sensori che misurano grandezze fisiche, mentre gli output possono azionare dispositivi come motori o luci. Arduino permette di programmare e gestire facilmente questi componenti, portando il tuo progetto alla vita.
 
-Quanto grandi sono? ci sono di tutte le dimensioni, importanti sono fattore forma e il tipo di processore in utilizzo. A seconda della grandezza ....
+## Caratteristiche di Arduino
+Arduino è un microcontrollore semplice e versatile, con:
+- Varie porte di input/output (digitali e analogiche).
+- Connessione USB per programmare e alimentare il dispositivo.
+- Componenti aggiuntivi come pulsanti di reset, LED, gestione dell'alimentazione.
+- Compatibilità con una vasta gamma di sensori e attuatori.
+- Sistema open-source, con documentazione e software facilmente accessibili.
+
+Puoi scaricare il software di sviluppo IDE direttamente dal sito ufficiale di Arduino: http://arduino.cc/en/Main/Software.
+
+## Applicazioni di Arduino
+Arduino può essere utilizzato in vari contesti per eseguire operazioni semplici ma efficaci:
+   - Sensori di vario tipo come input.
+   - Motori o altri attuatori come output.
+   - Creazione di robot autonomi o sistemi di controllo come interruttori automatici.
+Ad esempio, puoi costruire un robot a ruote che segue una linea o un interruttore della luce che si attiva automaticamente al passaggio di una persona.
+
+## Altre Opzioni
+Arduino è molto diffuso, ma ci sono anche altre opzioni per i microcontrollori:
+   - Teensy: Una scheda compatta e potente.
+   - PIC microcontrollers: Molto utilizzati per progetti industriali.
+   - Raspberry Pi: Simile ad Arduino, ma con la potenza di un mini computer completo.
+
+## Tipologie di Arduino
+Esistono diverse versioni di Arduino, ognuna con caratteristiche particolari, in termini di numero di porte di I/O, fattore di forma e processore utilizzato. Alcuni esempi:
+
+### Arduino UNO
+Inventato nel 2010, l'Arduino UNO è basato sul microcontrollore ATmega328. Dispone di:
+   - 14 porte digitali (che possono essere input o output).
+   - 6 porte analogiche, che possono essere convertite in digitali se necessario.
+
+### Arduino Mega
+L'Arduino Mega è una versione più grande dell'Uno, con più porte di comunicazione e maggiore memoria. Tuttavia, alcuni hardware potrebbero non essere compatibili con esso.
+
+### Arduino Micro
+Quando le dimensioni contano, l'Arduino Micro è una scelta eccellente. È basato sull'ATmega32U4 e ha 20 porte di I/O digitali. Ha un USB integrato, che permette di essere riconosciuto come mouse o tastiera. È simile all'Arduino Leonardo ma più piccolo.
+
+### Arduino LilyPad
+Il LilyPad è un Arduino pensato per progetti indossabili. Basato sull'ATmega168V, può essere alimentato via USB o con una fonte di alimentazione esterna. È molto utilizzato in progetti tessili, per creare abiti interattivi o illuminati. 
+
+Conversione da Analogico a Digitale
+Un segnale analogico è una gamma continua di valori di tensione, mentre il digitale può essere solo 0 o 5V. I microcontrollori come Arduino, che lavorano in digitale, richiedono quindi una conversione da analogico a digitale (ADC). L'Arduino UNO ha 6 pin per la conversione ADC, con una risoluzione di 10 bit, che mappa tensioni tra 0 e 5V in valori compresi tra 0 e 1023.
+
+<img src="lesson-img/lez.7/shield.png" alt="esempio di Sheld" width="50%" style="display: flex; float:left">
+
+### Shield Arduino
+Gli Shield sono schede aggiuntive che si collegano sopra l'Arduino per estenderne le funzionalità. Questi moduli aggiuntivi possono includere connessioni Ethernet, GPS, controllo di motori, e molto altro ancora. L'elenco completo di shield è disponibile su shieldlist.org. 
+
+<br>
+<br>
 
 
-CI sono sia ingressi analogici, che tipo di sensore danno ...
-i pin ...
+## Da dove partire:
+### Introduzione ad Arduino e il suo Linguaggio
 
-Arduino Mega ha un fattore di forma più grande che mi porta un numero di porte più elevato, più memomoria e più capacità di calcolo.
-Aduino Micro sono molto piccoli ma nanno solo porte di pin digitali e possono essere d'uso diverso. Dal contesto in cui mi trovo  sceglgo il tipo di dispositivo usare;
-LilyPad è grande quanto una moneta da 2€ ha anchesso una serie di potre digitale e analogiche che si possono usare. È molto stringraca ma...
+Arduino è una piattaforma ideale per chi vuole avvicinarsi all'elettronica e alla programmazione. Uno dei punti di forza di Arduino è la semplicità con cui permette di connettere il mondo digitale al mondo fisico attraverso un microcontrollore, cioè un piccolo computer dotato di porte di input/output. Con Arduino, si può controllare facilmente una varietà di dispositivi come **LED**, **motori**, **servomotori**, **relé**, e molto altro ancora.
 
-La cosa che dobbiamo ricordare sull?annalogico / digitale è che il nostro sengale che ci arriva in forma analogica è un segnale che mi arriva intoo ai 0/5Volt 
-arduino crea una coversione di tutto ciò che è un pin analogico.
+Per iniziare con Arduino, è consigliabile procurarsi uno **starter kit** che include componenti di base come LED, resistori, fili, motori e una **breadboard**. Poi, bisogna scaricare l'ambiente di sviluppo integrato (**IDE**) da [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software), che permette di scrivere, caricare e testare i programmi, chiamati **sketches**, sulla scheda Arduino.
 
-ADC - conversione a 10bit. vuol dire che il mio mapping non è più 255 ma 1023 su 5v. questo porta ad una rappresentazione più fine con una quantizzazione più precisa. 
+## Struttura di un Programma Arduino (Sketch)
 
-Arduino può essere modificato, di per se può essere modificato a proprio piacimento. per qusto si sono inventati gli Shieds per avere una connessiorn di rete. SOno dispositivi che si possono aggiungere sopra ed estendono le capacità dell'arduino ed incrementano le capacità di questo dispositivo.
-[aggiungere foto d'esempio]
+Il linguaggio di Arduino è basato su **C++**, ma è semplificato: circa l'80% delle istruzioni di C++ non sono utilizzate, rendendo la programmazione più accessibile anche ai principianti. Ogni sketch ha due funzioni fondamentali:
 
-### da dove partire:
-prendere uno starter kit, un'ambiente di sviluppo IDE e poi imparare a connettere l'arduino scrivere il programma ecc..
-si possono comprare altri vari sensori ecc. 
+1. **`void setup()`**: Questa funzione viene eseguita una sola volta quando Arduino viene acceso o resettato. Serve per inizializzare i pin di input e output, o altre impostazioni che devono essere fatte una volta sola.
+   
+   Esempio:
+   ```cpp
+   void setup() {
+       pinMode(13, OUTPUT); // Imposta il pin 13 come output
+   }
+   ```
 
-## Linguaggio di arduino
+2. **`void loop()`**: Questa funzione viene eseguita ripetutamente, creando un ciclo continuo. È qui che si definiscono le operazioni che Arduino deve svolgere continuamente, come accendere o spegnere un LED, leggere un sensore o azionare un motore.
+ 
+ Esempio:
+   ```cpp
+   void loop() {
+    digitalWrite(13, HIGH); // Accendi il LED collegato al pin 13
+    delay(1000);            // Aspetta per un secondo
+    digitalWrite(13, LOW);  // Spegni il LED
+    delay(1000);            // Aspetta per un secondo
+}
+```
 
-si basa su C++ con l'80% oercebti 
+## Pin e Funzioni Principali
+Arduino ha diversi tipi di pin, sia digitali che analogici, e ciascun pin può essere configurato come input o output usando il comando **`pinMode()`**. I passi fondamentali per interagire con i pin sono:
 
+Definire la modalità del pin **`(input o output)`**:
+ ```cpp
+pinMode(13, OUTPUT);  // Il pin 13 è configurato come output
+ ```
 
-per realizzare questi sketch, serve un ambiente proprio che è si scarica attraverso questo link [https://www.arduino.cc/en/software]
+### Leggere o scrivere sui pin:
+Scrivere: Usando **`digitalWrite(pin, value)`** dove value può essere HIGH o LOW.
+   ```cpp
+   digitalWrite(13, HIGH);  // Imposta il pin 13 a HIGH (5V)
+   ```
+Leggere: Usando **`digitalRead(pin)`** per leggere lo stato di un pin digitale, che sarà HIGH (5V) o LOW (0V).
+```cpp
+int val = digitalRead(2);  // Legge lo stato del pin 2
+```
 
-Arduino ha un'interfaccia particolare, che deve avere sempre una funzione setup e un loop; QUando lo connettimao al computer al sistema viene fuori Arduino UNO. Per programmarlo bisogna insereite delle cose all'interno delle nostre funzioni. 
-veri.
+## Funzione di delay
+Per fare in modo che il programma attenda prima di eseguire il prossimo comando, si usa la funzione **`delay(ms)`** dove ms rappresenta i millisecondi di pausa.
+```cpp
+delay(1000);  // Pausa di 1 secondo
+```
 
-ci sono altri comandi tra cui serial monitor... 
+## Librerie
+Arduino permette anche di usare librerie esterne, pacchetti di codice predefiniti che facilitano l'interazione con dispositivi complessi, come display LCD, motori o sensori. È possibile installare queste librerie direttamente dall'IDE di Arduino.
 
-su arduino c'è la possibilità di installare delle librerie.
+## Tipi di Pin
+- Digitali: I pin digitali possono essere impostati su HIGH (5V) o LOW (0V).
+- Analogici: Arduino può leggere segnali analogici e convertirli in valori digitali con una risoluzione a 10 bit, che va da 0 a 1023.
+Inoltre, ci sono modalità specifiche per i pin, come la modalità INPUT_PULLUP, che utilizza una resistenza interna pull-up per stabilizzare i valori di input quando non ci sono segnali collegati al pin.
 
-Nello scketch ci sono due elementi principali
-sunzione di setup: funzione che viene avviata solo una volta, solo nel momentnoe in cui viene chiesto al dispositivo di essere avviato e si essere riavviato la funzione di loop invece continuamente richiamata.
+---
+##### Lezione 8 - 24 Ottobre 2024
 
-Dentro alla funanione di loop bisona scrivere una seire di comandi. una serie di strumenti che mi aiutano a scrivere e leffere dai pin digitali. E che un determinato pin sia un pin di ingresso e un pin di uscita. SOlamente dopo posso andare a scrivere vglio leggere da quel pin oppure voglio scrivere seu quesl pin.
-Questo vale per al versione digitale e per la versione analogica. 
+[Scarica il PDF](https://elearning.uniud.it/moodle/pluginfile.php/820628/mod_resource/content/1/L07_Arduino.pdf)
 
-Poi abbiamo tutit i costritti: if-thn-else, for, Swich-case
+Il linguaggio di programmazione di Arduino è prevalentemente basato su C. Sono necessari due elementi principali: i **controlli di flusso** e le **iterazioni**.
+- I controlli di flusso si realizzano con le strutture **`if, else if, else`**, che devono essere scritte in minuscolo.
+- Le condizioni vengono inserite tra parentesi tonde e devono essere espressioni booleane (che restituiscono true o false).
+È possibile avere più di un'istruzione **`else if`**, mentre le istruzioni **`if`** ed else possono essere presenti una sola volta.
 
-GLi step che devo fare sono 2: adare a definire la modalità del pin, il sencodno andare o a leggere o a screivere. possiamo settare o HIGH o LOW. 
+```
+if(condition){
+   //tipo di condizione
+   }
+   else if{
+    //altrimenti seconda tipo di condizione
+   }
+   else{
+    //altrimenti esegui questo
+   }
 
-il pinMode() il numero del pin dipende da quello che leggo sulla board, mentre il mode Possono essere 3 diversi stati, input, output, input Pullup.
+```
 
-DI default se non forzo la mosalita A0 -> A5 sono tutti analogici. basta segnare che sono digitali [mettere immagini]
+per il **`FOR`**, serve per ripetere una condizione per un certo numero di volte
+```
+for (inizializzazione; condizione; incremento){
+   // eseguo ciò che è scritto qui finchè la condizione non viene verificata
+}
+```
 
-input-> mi aspetto che la mia baord riceva o 5v(high) o 0v(low)
-output -> =
+lo **`SWITCH(var)`**, vado a verificare il valore di una variabile ed eseguo una serie di operazione sulla base del valore della variabile.
 
-Input_pullup se non c'è collegato nulla è 0 ci sono dei sensori che campiano il loro comportamento se non riecvono tensione.[immgaine da inserire]
+## Esercizio: Accendere un LED
 
-NEl modo digitale è andare a scrivere, ovvero generale un segnale di uscita da un mio numero del pin. 
-digitalwrite(pin, value) - per value è high oppure Low. .. digitalRead(pin) può esser eo High o Low.
+L'obiettivo di questo esercizio è far lampeggiare un LED, che è un *attuatore*. Per questo esperimento, avrai bisogno di:
 
-La funzjione di delay, la ferma per un tot di secondi l'esecuzione del programma. delay (ms)
+- Un Arduino Uno
+- Un LED
+- Una resistenza
+- Un computer
 
+### Componenti e Pin
+
+Le porte di Arduino si chiamano **GPIO** (General Purpose Input/Output), che significa "ingressi/uscite a scopo generale". Il LED è un **diodo** e ha due terminali:
+
+- La gamba più corta si chiama **catodo** e corrisponde al polo negativo.
+- La gamba più lunga si chiama **anodo** e corrisponde al polo positivo.
+
+È importante collegare una resistenza in serie con il LED, altrimenti il LED potrebbe bruciarsi a causa di una corrente eccessiva. Il polo negativo del LED va collegato alla **massa** (terra) di Arduino.
+
+### Strumenti Utili
+
+Puoi utilizzare strumenti online come [Tinkercad](https://www.tinkercad.com), un programma che ti permette di simulare circuiti in modo semplice e interattivo.
+
+```
+// C++ code
+//
+void setup()
+{
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+```
+
+## Come si legge una breadboard?
+
+La breadboard è organizzata in **righe** e **colonne**:
+
+- Le righe superiori e inferiori sono collegate tra loro orizzontalmente per tutta la lunghezza (vedi immagine).
+- La parte centrale, invece, è organizzata verticalmente: i fori sono collegati per colonne, ma sono separati in gruppi di righe.
+
+> **Nota importante:** La stanghetta corta del LED va collegata al **ground** (terra).
+
+Le porte di **Power** forniscono sempre un segnale elettrico di uscita costante.

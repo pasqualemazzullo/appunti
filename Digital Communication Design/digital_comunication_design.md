@@ -261,3 +261,141 @@ Importanza dei Big Data nell’analisi delle tendenze di mercato e nelle strateg
 ## Produzione di Video e Contenuti Visivi
 - *Importanza dell'Audio:* L'audio è un senso cruciale nella comunicazione visiva, in quanto può creare una connessione emotiva profonda con il pubblico.
 - *Fasi Brevi:* Utilizzare frasi brevi per facilitare la comprensione, rendendo i contenuti più accessibili.
+
+##### Lezione 4 - 25 Ottobre 2024
+
+# SEO 
+- Scegliere un dominio indicizzato: importante avere già la parola chiave all'interno del dominio;
+- Utilizza un hosting performante: se scegliamo un hosting che mi aiuta a ottimizzare il caricamento dei media. 
+- Utilizzare uno schema ad albero ben strutturato in modo da permettere ad una locazione migliore di tutti i contenuti e che a livello di SEO lavori meglio.
+- Utilizzare le Keyword che mi indicizzano dentro ai miei articoli e dentro al blog, e inserire link in modo da creare un collegamento tra argomenti.
+- Indicizza i tuoi contenuti a partire dal titolo: ;
+- Utilizza i meta description:
+- Utilizza Keyword mirate ed attinenti all'argomento:
+- Crea contenuti mirati sulle parole chiave primarie e secondarie
+- Utilizzare link, interno ed esterno;
+- Utilizzare un numero di link correlato alla qualità di testo presente nella pagina web;
+- Utilizza url brevi e descrizioni;
+- Utilizza il grassetto;
+- Indicizza le tue immagini [ testo alternativo - titolo - didascalia - descrizione];
+- Scegli le categorie di riferimento più adatte;
+- Inserisci i Tag;
+- Aggiorna costantemente il sito web pubblica contenuti originali (non copiare da altri siti, google penalizza);
+- Il sito dev'essere responsive [utilizza un tema adatto];
+- Non appesantire il sito con inutili plugin carica i contenuti con risoluzione adeguata;
+- Installa un plugin adatto per la visualizzazione delle azioni SEO corrette e non [yoast SEO]
+
+Yoast SEO, permette di avere sott'occhio come state andando. al posto di questo si può usare ALL IN ONE SEO. 
+
+
+# Guida breve all'utilizzo di Wordpress 
+#### Apertura di un blog / sito web su altervista.org
+
+- **Iscrizione alla piattaforma artevista.org**
+- **Scelta del dominio**
+- **Modifica della password** alfanumerica fornita da Altervista [da > “modifica profilo” in alto a dx]
+- **Passaggio da http ad HTTPS:** richiederlo e dopo 24H attivarlo [da > Impostazioni > https > passa ad HTTPS] Dopo 24 ore L’Https sarà disponibile ma in alcuni casi sarà necessario attivarlo 
+- **Scelta del Tema** [da > Aspetto > Temi > aggiungi un nuovo tema > cercare tra i più popolari oppure ricercare il tema utilizzando il filtro in alto ]
+- **Modifica della Denominazione del Sito** [=NOME] **e del motto** [ = CLAIM] [da > Aspetto > personalizza > Denominazione sito]
+- **Aggiunta eventuale del Logo** [da > Aspetto > personalizza ] [attenzione: non tutti i temi supportano la visualizzazione del logo]
+- **Scelta dell’immagine dello Slider / sfondo homepage** [da > Aspetto > personalizza > immagine dell’header o slider — a seconda del tema] Prima installare e poi attivare 
+- **Caricamento Favicon** [da > Aspetto > personalizza > Denominazione sito piuttosto che Aspetto > Favicon]
+- **Eliminazione primo articolo** [articolo con immagine pulmino] [da > articoli > tutti gli articoli > selezionare tutti e poi "elimina es. articoli"]
+- **Disattivazione impostazione mobile** [da > mobile > disattiva mobile > salva impostazioni ]
+- **Eliminazione scritta “Powered by Altervista”** [da > Aspetto > Toolbar Altervista > in alto a dx “Disabilita la toolbar”]
+- **Personalizzazione del proprio account** [ovvero immagine profilo, etc. etc. ] [da > selezionare icona del profilo sulla barra in alto a dx ] 
+- **Creazione menu del sito** [prima su carta su carta]
+- **Creazione pagine relative alle voci di menu** [da > pagine > aggiungi pagina ]
+- **Creazione menu personalizzato** [rinominare il menu a proprio piacimento]
+- **Impostare sul proprio sito il nuovo menu appena creato** [da > personalizza sito > menu > scegliere il menu con la nuova denominazione, ovvero quello appena creato e posizionare le voci a proprio piacimento]
+- **Installare il plugin del GDPR** [inserire testo corretto + il link alla nuova pagina appositamente creata riguardo la privacy policy e personalizzare i colori]
+- **Installare il plugin CLASSIC EDITOR** [per facilitare l’editing degli articoli]
+- **Installare il plugin GALLERY** [ per creare le Gallery con le proprie immagini]
+
+# Comunicazione scritta nell'era digitale:
+
+#### Conoscere il proprio target
+Prima di scrivere, è essenziale capire a chi ci si rivolge. Conoscere interessi, linguaggio e necessità del pubblico permette di adattare il tono e lo stile, migliorando la comprensione e l’efficacia del messaggio.
+#### Selzionare le fonti
+Le informazioni devono provenire da fonti affidabili. Verificare i dati e citare fonti autorevoli conferisce credibilità e supporta il lettore nell’approfondimento del tema trattato.
+#### Dividi il testo per blocchi
+I testi lunghi scoraggiano il lettore; suddividere il contenuto in blocchi facilita la lettura e permette di organizzare meglio i concetti, rendendo più semplice la comprensione.
+#### Intervalla il testo con altri contenuti
+Immagini, grafici o video integrati al testo rendono la comunicazione più dinamica e favoriscono la comprensione, creando momenti di pausa e richiamando l’attenzione.
+#### Non scrivere in colonne larghe
+Righe troppo lunghe affaticano la lettura. Limitare la larghezza del testo migliora l'esperienza del lettore, permettendo una lettura più scorrevole e senza sforzo.
+#### Usa elenchi puntati/numerati
+Gli elenchi permettono di evidenziare informazioni chiave in modo chiaro e ordinato, agevolando il lettore nell’identificazione dei punti più importanti del discorso.
+#### Utilizza font adeguati
+Il carattere del testo influisce sulla leggibilità. Usare font chiari e moderni, con dimensioni adatte, contribuisce a rendere la lettura confortevole e accessibile a un ampio pubblico.
+#### Adotta la giusta grandezza del testo
+La dimensione del carattere deve essere facilmente leggibile su diversi dispositivi. Di solito, un testo tra i 16 e i 18 punti è ottimale per il corpo principale; titoli e sottotitoli dovrebbero essere più grandi per garantire una gerarchia visiva chiara.
+#### Utilizza il grassetto
+Il grassetto è utile per evidenziare parole o concetti chiave, aiutando il lettore a orientarsi rapidamente all'interno del testo. Non abusarne: riservalo per i punti essenziali.
+#### Non scrivere in corsivo
+Il corsivo può risultare faticoso da leggere, soprattutto su schermi digitali, dove le linee curve e sottili perdono chiarezza. Limitarne l'uso mantiene il testo chiaro e scorrevole.
+#### Non sottolineare
+La sottolineatura è spesso confusa con link ipertestuali. Evitala nel testo comune per evitare ambiguità e concentrati su altre modalità di enfasi, come il grassetto.
+#### Giustificato o allineato a sinistra?
+L'allineamento a sinistra è generalmente preferibile per testi digitali: evita spazi irregolari e migliora la leggibilità su qualsiasi schermo. Il testo giustificato, invece, è consigliabile solo per blocchi brevi e su layout grafici che mantengano omogeneità visiva.
+#### Sfrutta il potere dei link  
+I link possono arricchire il testo collegando a contenuti rilevanti, approfondimenti o risorse utili. Assicurati che siano pertinenti e non abusarne per non distrarre il lettore.
+#### Inserisci le immagini  
+Le immagini spezzano il testo e rendono la lettura più piacevole. Usa immagini pertinenti e di alta qualità per enfatizzare concetti e rendere i contenuti più coinvolgenti.
+#### Non esagerare con i colori  
+Troppi colori distraggono e rendono il testo caotico. Scegli una palette limitata e usa colori contrastanti per mettere in evidenza solo le informazioni cruciali.
+#### Sfrutta le tabelle  
+Le tabelle facilitano la comprensione di dati complessi. Usale per sintetizzare e organizzare informazioni in modo chiaro e ordinato, garantendo sempre una buona leggibilità.
+#### Usa la grafica funzionale del web  
+Design e layout web devono essere semplici e funzionali. Evita grafiche troppo elaborate e privilegia un aspetto pulito per valorizzare il contenuto.
+#### Parla in modo semplice  
+Usa un linguaggio chiaro e diretto per facilitare la comprensione, evitando periodi troppo complessi che possano rallentare la lettura.
+#### Evita il gergo settoriale  
+Evita termini tecnici o specifici del settore che potrebbero non essere compresi dal pubblico generale. Utilizza un linguaggio accessibile e inclusivo.
+#### Scegli il giusto stile e tono  
+Adatta lo stile e il tono del messaggio in base al target: un tono amichevole e informale per un pubblico giovane, più formale per contesti professionali.
+#### Dai del "Tu" al tuo lettore  
+Utilizza la seconda persona singolare per creare un dialogo diretto con il lettore, rendendo la comunicazione più personale e coinvolgente.
+#### Cura la leggibilità  
+Usa font chiari, un'interlinea adeguata e blocchi di testo ben suddivisi. Questi elementi aiutano a rendere il contenuto leggibile e piacevole.
+#### Sfrutta le regole del SEO copywriting  
+Utilizza parole chiave pertinenti e metadati adeguati per migliorare la visibilità sui motori di ricerca, senza compromettere la qualità del contenuto.
+#### Crea valore per il tuo pubblico  
+Scrivi contenuti che rispondano a domande, risolvano problemi o soddisfino esigenze reali dei lettori, creando valore e fiducia.
+#### Scrivi per piacere agli uomini non a Google  
+Prioritizza la chiarezza e l’utilità per il lettore anziché concentrarti esclusivamente sull’ottimizzazione SEO. Un buon contenuto soddisfa sia il lettore che i motori di ricerca.
+#### Scegli bene il tono  
+Il tono giusto rafforza il messaggio: usa un tono professionale per contesti aziendali, oppure uno informale e amichevole per blog o post sui social.
+#### Utilizza la piramide rovesciata
+Posiziona le informazioni più importanti all'inizio di ogni paragrafo per catturare l’attenzione e facilitare la lettura. Scendi poi nei dettagli, consentendo al lettore di ottenere subito ciò che è essenziale senza dover leggere tutto.
+#### Fai una revisione finale
+Prima di pubblicare, esegui una revisione accurata per eliminare errori grammaticali e migliorare la chiarezza. Controllare il testo una volta in più assicura che sia professionale e privo di imperfezioni.
+#### Elimina il superfluo
+Rimuovi parole e frasi non essenziali per rendere il contenuto snello e incisivo. Un testo essenziale e diretto risulta più piacevole e facile da seguire per il lettore.
+#### Una volta pubblicato: rileggi/correggi
+Anche dopo la pubblicazione, rileggere e correggere è fondamentale. Gli errori possono sfuggire alla prima revisione, e un controllo successivo garantisce un contenuto sempre di alta qualità.
+#### N.B.: Ricorda sempre la regola del falò
+Applica la “regola del falò”: brucia le parti del testo che non aggiungono valore. Come un fuoco che elimina l’inutile, questa regola aiuta a mantenere solo ciò che serve davvero. Man mano che scrivo vado ad alimentare la fiamma, le persone si agiungono e quindi è importante non scoraggirsi.
+
+
+# Differenza principale tra *newsletter* e *DEM* (Direct Email Marketing):
+
+### 1. **Newsletter**
+   - **Obiettivo**: Informare e coinvolgere l’utente.
+   - **Contenuto**: Solitamente fornisce aggiornamenti, notizie, articoli, consigli o approfondimenti su argomenti di interesse per l’utente, senza un obiettivo di vendita diretto.
+   - **Tono**: È più informativo ed educativo, mirato a creare una relazione a lungo termine con l'utente.
+   - **Frequenza**: Spesso periodica (settimanale, mensile, ecc.), per mantenere gli utenti aggiornati su un certo tema.
+
+### 2. **DEM (Direct Email Marketing)**
+   - **Obiettivo**: Vendere o promuovere un prodotto/servizio specifico.
+   - **Contenuto**: Di solito ha una call-to-action forte, come “Acquista ora”, “Iscriviti” o “Approfitta dello sconto”. Può contenere offerte, promozioni o inviti ad eventi, con l’obiettivo di generare conversioni.
+   - **Tono**: Più diretto e persuasivo, orientato alla vendita.
+   - **Frequenza**: Può essere più variabile, spesso inviata quando ci sono promozioni speciali o nuovi lanci di prodotto.
+
+In breve, mentre la *newsletter* costruisce la relazione con il pubblico, la *DEM* è focalizzata sulla promozione diretta per generare vendite o lead.
+
+#### Come si fa una newsletter? 
+o abbiamo un software che può essere installato, oppure si può accedere tramite login. Il software migliore è MailChimp. a seconda del pacchetto che scegliete potete fare newsletter 
+Sull'oggetto della mail, alcuni profili mettono delle emoji. Ci sono delle volte che letteralmente vengono buttate in spam.
+
+Le parole pesano nel copyright

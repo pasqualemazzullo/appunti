@@ -30,6 +30,9 @@ L'esame consisterà in un progetto a scelta, concordato preventivamente con il d
 5. [Lezione 5 - 15 Ottobre 2024](#lezione-5---15-ottobre-2024)
 6. [Lezione 6 - 17 Ottobre 2024](#lezione-6---17-ottobre-2024)
 7. [Lezione 7 - 22 Ottobre 2024](#lezione-7---22-ottobre-2024)
+8. [Lezione 8 - 24 Ottobre 2024](#lezione-8---24-ottobre-2024)
+9. [Lezione 9 - 29 Ottobre 2024](#lezione-9---29-ottobre-2024)
+10. [Lezione 10 - 31 Ottobre 2024](#lezione-10---31-ottobre-2024)
 
 ---
 
@@ -1851,3 +1854,276 @@ La breadboard è organizzata in **righe** e **colonne**:
 > **Nota importante:** La stanghetta corta del LED va collegata al **ground** (terra).
 
 Le porte di **Power** forniscono sempre un segnale elettrico di uscita costante.
+
+#### lezione 9 29/10/2024
+# A gentle Indroduction to Python Programming
+
+### che cos'è phyton?
+Un linguaggio di programmazione ad alto livello; questo vuol dire che si possono fare cose complicate utlizzando una sintassi molto semplice. Questo è un linguaggio interpretato, questo vuol dire che non esiste un compilatore. 
+é un linguaggio vecchio, risale nel 1980, inventato da Guido van Rossum aka The benevolent dictator for life (BDFL). 
+
+### cosa ha di importante e interessante Phyton? 
+é un linguaggio aperto e ci sono moltissime persone che sono propensi a rilasciare librerie e framework perchè è tutto opensources. Ci sono molti framework che vengono usati per l'AI.
+Il linguaggio si è sviluppato negli anni ed è arrivato dove è avvenuta una grossa divisione. consideriamo la versione 3. V3.1x
+
+per lezione abbiamo scaricato JetBrain con licenza studenti. poi comunque possiamo usare VScode. 
+poi dobbiamo scaricare anaconda.
+
+## Variabili
+- In Python, una **variabile** è un "indicatore" che contiene un valore, ma **non è necessario specificarne il tipo**.
+- Il tipo della variabile può cambiare in base al contenuto che le assegniamo.
+- È importante ricordare cosa viene memorizzato in ogni variabile.
+- Python è **case-sensitive**, quindi `variabile` e `Variabile` sono differenti.
+- Le variabili devono iniziare con una lettera o con un underscore (`_`). Gli altri caratteri possono includere lettere, numeri e underscore.
+- **Buona norma**: i nomi di variabili e funzioni dovrebbero essere scritti in minuscolo.
+  
+### Tipi di Dato Principali
+- **Interi**: numeri interi (es. `5`)
+- **Float**: numeri decimali (es. `5.0`)
+- **Stringhe**: sequenze di caratteri (es. `"Python"`)
+- **Booleani**: `True` o `False`
+
+### Funzione `type()`
+La funzione `type()` restituisce il tipo di dato della variabile passata come parametro.
+
+```python
+x = 5
+print(type(x))  # Output: <class 'int'>
+```
+
+## Typecasting (Conversione del Tipo)
+Si può cambiare il tipo di una variabile tramite il typecasting:
+
+**`float()`**: converte un input in un valore decimale.
+**`int()`**:: converte un input in un valore intero.
+**`str()`**:: converte un input in una stringa.
+
+```python
+x = int(5.9)  # x è ora 5 come intero
+y = float(5)  # y è ora 5.0 come float
+```
+
+## Funzioni Built-in
+Python fornisce diverse funzioni built-in. Una funzione essenziale è **`print()`**, che stampa in output il contenuto passato come argomento.
+
+**`len()`**: restituisce la lunghezza dell'oggetto passato (utile per stringhe e liste).
+```python
+nome = "Python"
+print(len(nome))  # Output: 6
+```
+
+## Controllo di Flusso
+Condizioni: **`if`**,**`else`**, **`elif`**
+Le condizioni in Python non richiedono parentesi, ma ogni condizione termina con i :.
+L'indentazione è fondamentale per il corretto funzionamento del codice.
+
+```python
+x = 10
+if x > 5:
+    print("Maggiore di 5")
+elif x == 5:
+    print("Uguale a 5")
+else:
+    print("Minore di 5")
+```
+
+## Contenimento con in e not in
+**`in`**: verifica se un elemento è contenuto in una sequenza (es. stringa o lista).
+**`not in`**: verifica se un elemento non è contenuto.
+
+```python
+frase = "Imparo Python"
+print("Python" in frase)  # Output: True
+print("Java" not in frase)  # Output: True
+```
+
+## Cicli: for
+Il ciclo **`for`** è spesso usato con operatori di contenimento (in) e con la funzione range.
+
+```python
+# Esempio di `for` con lista
+numeri = [1, 2, 3, 4]
+for n in numeri:
+    print(n)
+```
+
+## Funzione range()
+La funzione **`range()`** crea una lista di numeri con i seguenti parametri:
+
+**`start`**: valore iniziale (opzionale, default 0)
+**`stop`**: valore finale (escluso)
+**`step`**: passo (opzionale, default +1)
+
+```python
+Esempio:
+for i in range(0, 10, 2):
+    print(i)  # Output: 0, 2, 4, 6, 8
+```
+
+## Shebang (#!)
+Il shebang **`(#!)`** è una sequenza di caratteri all'inizio di uno script usata per specificare l'interprete da usare. Ne parleremo in dettaglio più avanti.
+## Esecuzione di Codice Python Online
+È possibile usare servizi online per eseguire Python anche se non si dispone di un interprete locale. Questi servizi permettono di scrivere codice alternato a testo, immagini, video, ecc.
+
+## Funzioni
+Le funzioni sono utili quando una parte di codice deve essere eseguita più di una volta. In Python, le funzioni si definiscono con la parola chiave **`def`**.
+
+```python
+def nome_funzione(parametro):
+    # corpo della funzione
+    pass
+```
+
+## Funzioni con return
+La parola chiave **`return`** permette di restituire un valore, ma è opzionale. Se non specificato, la funzione restituisce None.
+```python
+def somma(a, b):
+    return a + b
+risultato = somma(3, 4)  # risultato sarà 7
+```
+---
+##### Lezione 10 - 31 Ottobre 2024
+
+## Strutture dati
+In pyton abbiamo 3 tipi diversi: gli alberi, le liste, le list di link e le direction.
+
+### Liste
+ha una forma di Array che in phyton si definisce lista. vengono raffigurate all'interno di paretesi quadrate e separate da virgola. Alcune volte vengono indicizzate delle variabili come liste vuoti e può contenere qualsiasi elemento. Poi le liste possono essere popolate e modificate. QUando modifichiamo una lista vogliamo potervi accedere: 
+
+```python
+   a=[5,3,2,7]
+   print (a[0])
+
+   a[0]=100 #così sostituisco il primo elemento
+```
+
+ricorda che gli elementi si iniziano a contare da 0. 
+Questo si può fare sia per leggere una lista, sia per modificare una lista. La sostituzione può essere fatta con tutto.
+
+#### operazione di slicing
+é un'operazione che mi permette di estrarre degli elementi da una lista, quindi posso spaccare in più elementi la lista. 
+
+```python
+   a=[5,3,2,7]
+   print (a[1:3]) #dalla variabile a voglio estrarre una sosttolista di cui però l'ultimo è escluso. 
+
+   print (a[2:]) # parto dal 2 e vado fino alla fine
+   print (a[:2]) #parto dall'inizio e mi fermo a 2
+
+   print (a[:]) # in questo caso si crea una copia dell'elemento
+```
+
+Esempio
+```python
+   la_mia_seconda_lista=["ciao","come","stai","5",none,[],"mondo"]
+   
+   print(la_mia_seconda_lista[0:3])
+   ["ciao","come","stai"]
+
+   print(la_mia_seconda_lista[:3])
+    ["ciao","come","stai"]   
+
+   print(la_mia_seconda_lista[3:7])
+   ["5",none,[],"mondo"]
+
+   print(la_mia_seconda_lista[3:])
+   ["5",none,[],"mondo"]
+
+```
+
+Poi le liste hanno a che fare con delle funzioni dette di routine, che hanno a che fare con degli elemnti contenuti dentro alla mia lista. Possiamo:
+
+ **`apped(x)`** - qualcosa che viene aggiunto alla fine della lista e che posso aggiungere in qualsiasi elemento.
+ **`extend(x)`** - é molto simile alla precedente ma lavora su due liste in contemporanea dello stesso tipo. (a.extend(b), con il punto vado a richiamare le funzioni della lista). Con questa funzione il contenuto di a si modifica (*definita in place perchè si modifica ciò che è contenuto nella variabile = non restituisce nulla come funzione*). 
+
+ Esempio:
+```python
+   lista_numerica=[1,2,3,4,5,6,7,8,9,10]
+   lista_numeri_pari=[]
+   for numero in lista_numerica:
+      if numero % 2 == 0
+      print(f'il numero {numero} è pari')
+
+     lista_numeri_pari.append(numero)
+     print(lista_numeri_pari)
+
+```
+ **`sort(x)`**
+
+ ### Le tuple 
+ sono le gemelle delle liste ma per essere create vengono usate le parentesi tonde. Le tuble a differenza delle liste sono elementi immutibili, per cui si possono solo leggere ma non modificare e sovrescrivere. Per leggere si devono usare le parentesi quadrate.
+
+ Esempio:
+```python
+      tupla_lettere=("a","b","c")
+      for lettera in tupla_lettere:
+         print(f'Lettera: {lettera}')
+
+   print (tupla_lettere.index("c")) # con index recupero la posizione
+
+   lista_lettere =list(tupla_lettere) # si possono modificare la tupla attraverso la trasformazione in liste
+
+```
+
+### i Dizionari
+ Sonon dei contenitori che al posto di assere agganciati, tra chiave e (solo 1) valore. Gli elementi del dizionario sono basati su coppia chiave valore. Le chiavi del mio dizionario devono essere degli oggetti, interi, float o stringe, altro non è concepito. I valori invece possono essere di qualsiasi tipo.
+
+ Esempio:
+```python
+   d={ "a":27,"b":"dog"}
+   print (d)
+   {'a':27,'b':"dog"}
+
+```
+ Esempio:
+```python
+   dizionario={ "chiave_1":"valore_1","chiave_2":"valore_2",10:"valore_3","chiave_4":4, 5:(1,2,4)} #definisco il dizionario, con le graffe.
+   print (dizionario[chiave_2]) #attraverso al chiave si può estrerra/modificare il valore.
+
+   dizionario["chiave_2"] ="Nuovo valore" #modifica del valore
+
+   print(dizionario.keys()) # restituisce tutte le chiavi
+   print(dizionario.values()) # restituisce tutte i valori
+
+   dizionario["chiave_5"] = "valore5" #assegno un nuovo elemento dentro al dizionario
+
+   print(dizionario.get(1, "non esiste")) #questa funzione mi dice "if questa chiave esiste, mi restituisci il valore altrimenti mi dici non esiste"
+
+   #operazione di cancellazione di un elemento
+   del dizionario[chiave_5] #del non seguito da () = comando non funzione.
+
+   #operazione per fondere due dizionari
+   d1={"a":1,"b":2,"c":3}
+   d2={"W":4,"z":5,"y":6}
+
+   d1.update(d2)
+   print(d1)
+
+   #ho chiavi diverse, li aggancia come prima l'extend mentre se ha le chiavi uguali le chiavi del secondo sovrascrivono quelle del primo.
+
+```
+
+## Librerie
+ Esempio:
+```python
+import math
+```
+Tutto ciò che mi serve lo importo. Per installare pacchetti aggiuntivi c'è la stnadard library. 
+
+**`pip list`** - ti da la  lista dei pacchetti installati. **`pip install`** ti permette di installaere quello che vogliamo.
+
+# Introduzione con Rasperry Pi
+
+Raspberry, viene conosciuto come il un "sigle board computer", con il quale possiamo fare qualsiasi cosa. 
+Lo scopo era quello di educare i bambini ad usare questi dispositivi.
+
+Vantaggi: 
+- relativamente poco costoso;
+- ben documentato e disponibile;
+- versatile
+- compatto
+
+Svantaggi:
+- chi non ha dimestichezza di linux
+- non era esattamente realtime
+- Non ha un ADC (solo porte digitali)

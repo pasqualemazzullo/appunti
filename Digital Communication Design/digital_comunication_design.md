@@ -394,8 +394,23 @@ Applica la “regola del falò”: brucia le parti del testo che non aggiungono 
 
 In breve, mentre la *newsletter* costruisce la relazione con il pubblico, la *DEM* è focalizzata sulla promozione diretta per generare vendite o lead.
 
-#### Come si fa una newsletter? 
-o abbiamo un software che può essere installato, oppure si può accedere tramite login. Il software migliore è MailChimp. a seconda del pacchetto che scegliete potete fare newsletter 
-Sull'oggetto della mail, alcuni profili mettono delle emoji. Ci sono delle volte che letteralmente vengono buttate in spam.
+### Come si fa una Newsletter?
+#### Strumenti
+    Software per newsletter:
+    Puoi utilizzare un software che può essere installato sul tuo dispositivo o accedere tramite login a piattaforme online.
+    Il software più popolare e consigliato è MailChimp, che offre diverse opzioni a seconda del pacchetto scelto.
+#### Oggetto della Mail
+    Emoticon: Alcuni utenti inseriscono delle emoji nell'oggetto della mail. Tuttavia, è importante fare attenzione, poiché l'uso eccessivo o non appropriato di emoji può causare il filtraggio come spam.
+#### Marketing e Campagne
+    Parole e Copyright: Le parole utilizzate nell'oggetto della mail o nel contenuto devono essere scelte con attenzione, poiché possono influire sul copyright e sulla ricezione delle mail.
 
-Le parole pesano nel copyright
+- # CPM (Cost Per Mille): Si tratta di una modalità di pagamento per le campagne in cui paghi una certa somma per ogni 1000 visualizzazioni dell'annuncio.
+
+- # CPC (Cost Per Click): In questa modalità, paghi per ogni clic effettuato sull'annuncio.
+
+### Pianificazione delle Campagne
+Le campagne devono essere programmate con anticipo per essere efficaci.
+È fondamentale concentrarsi sul vero concetto di marketing, che si basa sulla creazione di un valore autentico con l'utente.
+
+### Call to Action (CTA)
+Una CTA (Call to Action) chiara e ben posizionata è fondamentale per ottenere il coinvolgimento dell'utente e spingerlo a compiere l'azione desiderata (acquisto, iscrizione, etc.).

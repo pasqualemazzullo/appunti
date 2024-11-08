@@ -435,3 +435,26 @@ Abbiamo concorrenza? diretta? indiretta? che tipo di applicazioni sono e come fu
 se già ci sono altri prodotti simili al nostro, gli utenti sono già abituati ad usarlo e hanno delle attese da soddisfare rispetto ad altri prodotti. Bisogna identificare le applicazioni concorrenti e farne una lista. Non serve farle tutte. Selzionare il numero di applicazioni da analizzare, non c'è il numero massimo. 
 Capire il tipo di contenuti presenti dentro all'applicazione, dal punto di vista di pattern di design che sono presenti nell'interfaccia, quali funzionalità permette l'applicazione. Conta anche capire qual'è il nostro effetto mentre stiamo usando quell'applicazione per la prima volta. Importnate sono anche i commenti sugli store. 
 Mentre facciamo l'analisi importnate fare screenshot, e fare una tabella che evidenziano sia gli aspetti positivi sia quelli negativi. Un'altro aspetto da sottolineare è creare una sorta di linea guida / documento, in cui sottolineo le "*best practise*".
+
+Lezione 8/11/2024 - Da sistemare
+# Envision
+1. **Storyboarding**: È una sequenza di immagini che rappresentano la relazione tra l'utente e l'applicazione mobile (o, in generale, qualsiasi tipo di sistema). Per applicazioni complesse, potrebbe essere necessario utilizzare più storyboard. Questi disegni servono a visualizzare il contesto di utilizzo e, in un certo senso, anche a spiegare come l'app dovrebbe essere usata. Lo storyboard è composto da una serie di fotogrammi che raccontano una storia. Per creare uno storyboard, si possono utilizzare strumenti semplici come post-it e una matita, oppure si può optare per la versione digitale. Tuttavia, se si aumenta la fedeltà dei dettagli, è spesso meglio realizzarlo su carta. Gli elementi che compongono uno storyboard includono oggetti, persone, emozioni (come le espressioni facciali) e dialoghi. Gli oggetti possono essere creati da una combinazione di singole forse. Aiutano ad aggiungere realismo e a capire gli storyboard. In linea di principio, bisogna disegnare gli oggetti in maniera accurata anche se basta che si capisca. allo stesso tempo evitare di inserire troppi dettagli. soprattutto non c'e bisogno di disegnare schermate dell'applicazione. disegnare inoltre persone in modo accurato è difficile ma semplici stick figures vanno bene. il riconoscimento delle espressioni facciali è veramente tanto potente in noi. basta disegnare due punti e una linea per consentire alle persone di vedere una faccia con varie espressioni facciali. ultimi i dialoghi. evitare didascalie, usare dialoghi dentro i ballons.
+2. **The establishing shot**: e1 il primo frame dello storyboard e la risposta alla domand "dove mi trovo?".
+3. **Usare transisioni**
+
+Guide generali
+1. stick to five to eight frames total
+2. start by asking the question where am i
+3. spend just enogh time on your storyboard to document yout vision and then stop
+4. do not add to much interface detail
+5. close with an (appropriate) bang
+  - the final frame of the storyboard should the benefit of using the app
+  - stay believable
+
+testing the storyboard:
+- after you complete a storyboard, test it!
+- you should first do a walkthrough with yout team to understand if the storyboard is appropriate
+  - the walkthrough may least only 10-15 minutes
+  - walk through each frame and record feedback from the team (is everything clear? are there missing elements? ...)
+  - modify the storyboard if needed
+- test the storyboard with your prospective users to check if they understand and relate to it!
